@@ -16,13 +16,15 @@ public class CucumberTests {
     }
 
     @When("WildCat is hungry")
-    public void wildcatIsHungry() {
-        WildCatEat = TestMethods.isHungry(isHungry);
+    public void wildcatIsHungry() {WildCatEat = TestMethods.isHungry(isHungry);
     }
 
     @Then("WildCat will be fed")
-    public void wildcatWillBeFed() {
-        assertEquals(WildCatEat, WildCatEat);
+    public void wildcatWillBeFed()
+    {
+        WildCat Wc = new WildCat("Power", "Tiger", 5);
+        Wc.setHungry(true);
+        assertEquals(Wc.getHungry(), true);
     }
 
     @When("WildCat is not hungry")
@@ -32,16 +34,18 @@ public class CucumberTests {
 
     @Then("WildCat will not be fed")
     public void wildcatWillNotBeFed() {
-        assertEquals(WildCatEat, WildCatEat);
+        WildCat Wc = new WildCat("Power", "Tiger", 5);
+        Wc.setHungry(false);
+        assertEquals(Wc.getHungry(), false);
     }
 
     static class TestMethods {
         static String isHungry(String isHungry) {
             String eat = "";
             if (isHungry.equals("true")) {
-                eat = "Food is fed";
+                eat = "Hungry";
             } else if (isHungry.equals("false")) {
-                eat = "Food is not fed";
+                eat = "Not Hungry";
             }
             return eat;
         }

@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import java.time.LocalDate;
 import static org.junit.Assert.assertEquals;
 
-
 public class WildCatTest {
 
     @Test
@@ -61,6 +60,4 @@ public class WildCatTest {
         Wc.setHungry(false);
         assertEquals(false,Wc.getHungry());
     }
-
-
 }

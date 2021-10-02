@@ -13,12 +13,14 @@ public abstract class Animal {
     public abstract String reproduce();
 
     public String sleep() {
+
         return "The animal is sleeping";
+
     }
 
     public String die()
     {
 
-        return "The animal has died.";
+        return "The animal has died";
     }
 }

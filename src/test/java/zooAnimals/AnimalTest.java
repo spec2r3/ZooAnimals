@@ -1,6 +1,8 @@
 package zooAnimals;
 
 import static org.junit.Assert.*;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,23 +10,27 @@ import java.time.LocalDate;
 
 public class AnimalTest {
 
-    @org.junit.Test
+    @Test
     public void breathe() {
     }
 
-    @org.junit.Test
+    @Test
     public void eat() {
     }
 
-    @org.junit.Test
+    @Test
     public void reproduce() {
     }
 
-    @org.junit.Test
+    @Test
     public void sleep() {
+        WildCat M = new WildCat();
+        Assert.assertEquals("The animal is sleeping", M.sleep());
     }
 
-    @org.junit.Test
+    @Test
     public void die() {
+        WildCat M = new WildCat();
+        Assert.assertEquals("The animal has died", M.die());
     }
 }

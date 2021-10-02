@@ -1,7 +1,6 @@
 package zooAnimals;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class WildCat extends Mammal {
 
@@ -11,7 +10,8 @@ public class WildCat extends Mammal {
     private boolean Hungry;
 
     public WildCat() {
-        this.name = "Tiger";
+
+        this.breed = "Tiger";
     }
 
     public WildCat(String name) {
@@ -24,9 +24,10 @@ public class WildCat extends Mammal {
        this.breed = Breed;
     }
 
-    public WildCat(String Name, String Breed, int Years) {
-
-        this(Name, Breed, Years, true);
+    public WildCat(String Name, String Breed, LocalDate dateOfBirth) {
+        this.name = Name;
+        this.breed = Breed;
+        this.DOB = dateOfBirth;
     }
 
     public WildCat(String pName, String pBreed, LocalDate dateOfBirth, boolean hungry) {
@@ -41,6 +42,12 @@ public class WildCat extends Mammal {
         this.breed = breed;
         this.DOB = LocalDate.now().minusYears(Years);
         this.Hungry = hungry;
+    }
+    public WildCat(String name, String breed, int Years) {
+        this.name = name;
+        this.breed = breed;
+        this.DOB = LocalDate.now().minusYears(Years);
+        this.Hungry = false;
     }
 
     public void setName(String Name)
@@ -70,19 +77,19 @@ public class WildCat extends Mammal {
         return DOB;
     }
 
-    public boolean getIsHungry() {
+    public boolean getHungry() {
         return Hungry;
     }
 
-    public void setIsHungry(boolean IsHungry) {
+    public void setHungry(boolean IsHungry) {
         this.Hungry = IsHungry;
     }
 
     public String eat() {
         if(this.Hungry) {
-            return this.name + " is hungry and needs food";
+            return "Hungry";
         } else {
-            return this.name + " is not hungry and does not need food";
+            return " Not Hungry";
         }
     }
 

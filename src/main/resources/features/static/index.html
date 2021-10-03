@@ -1,16 +1,37 @@
 <!DOCTYPE html>
+<link href="index.css" rel="stylesheet"/>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My swear generator</title>
+    <title>Wild-Cat</title>
 </head>
 <body>
-<h1><a href="customRoute">This is what i think of you</a></h1>
-<form action = "/customRoute" method="GET" id="anyname">
-    <div>
-        <label for="nameField">what is your favourite swearword?</label>
-        <input name="mySwear" id="nameField">
-        <button>Do your worst</button>
+<h1><a href="WildCat">Zoo List</a></h1>
+<form action = "/ZooList" method="GET" id="ZooList">
+    <div id="animalForm">
+        <p> Click below add a wildcat to Zoo</p>
+        <button>Add the wildcat!</button>
+    </div>
+
+<h1><a href="Wild Cat Test">Wild Cat Test</a></h1>
+<form action = "/WildcatTesting" method="GET" id="methodThree">
+    <div id="WildcatTest">
+        <button>Wild Cat Test</button>
+    </div>
+
+</form>
+
+<h1><a href="addWildCat">Add a new Cat</a></h1>
+<form action = "/addCat" method="POST" id="methodFive">
+    <div id="catAdderForm">
+        <p>Add a new Wildcat to the Zoolist</p>
+        <label for="Name">Name of the wildcat</label>
+        <input name="Name" id="Name">
+        <label for="Breed">Breed of  the wildcat</label>
+        <input name="Breed" id="Breed">
+        <label for="age">Age of the cat</label>
+        <input name="age" id="age">
+        <button>Add WildCat</button>
     </div>
 
 </form>

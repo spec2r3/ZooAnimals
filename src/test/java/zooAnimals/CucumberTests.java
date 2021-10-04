@@ -7,21 +7,22 @@ import io.cucumber.java.en.When;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CucumberTests {
-    private Boolean isHungry;
-    private String WildCatEat;
+    private String Hungry;
+    private Boolean WildCatEat;
 
-    @Given("WildCat hunger is {string}")
-    public void wildcatHungerIs(Boolean arg0) {
-        isHungry = arg0;
+    @Given("WildCat hunger is true")
+    public void wildcatHungerIs(String Hunger) {
+
+        Hungry = Hunger;
     }
 
     @When("WildCat is hungry")
-    public void wildcatIsHungry() {WildCatEat = TestMethods.isHungry(isHungry);
+    public void wildcatIsHungry() {
+        WildCatEat = TestMethods.isHungry(Hungry);
     }
 
     @Then("WildCat will be fed")
-    public void wildcatWillBeFed()
-    {
+    public void wildcatWillBeFed() {
         WildCat Wc = new WildCat("Power", "Tiger", 5);
         Wc.setHungry(true);
         assertEquals(Wc.getHungry(), true);
@@ -29,7 +30,8 @@ public class CucumberTests {
 
     @When("WildCat is not hungry")
     public void wildcatIsNotHungry() {
-        WildCatEat = TestMethods.isHungry(isHungry);
+
+        WildCatEat = TestMethods.isHungry(Hungry);
     }
 
     @Then("WildCat will not be fed")
@@ -44,10 +46,12 @@ public class CucumberTests {
             String eat = "";
             if (isHungry.equals("true")) {
                 eat = "Hungry";
-            } else if (isHungry.equals("false")) {
-                eat = "Not Hungry";
             }
-            return eat;
+            else {
+                eat = "Not Hungry";
+
+            }
+            return null;
         }
     }
 }

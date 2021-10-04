@@ -7,11 +7,11 @@ import io.cucumber.java.en.When;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CucumberTests {
-    private String isHungry;
+    private Boolean isHungry;
     private String WildCatEat;
 
     @Given("WildCat hunger is {string}")
-    public void wildcatHungerIs(String arg0) {
+    public void wildcatHungerIs(Boolean arg0) {
         isHungry = arg0;
     }
 
@@ -40,7 +40,7 @@ public class CucumberTests {
     }
 
     static class TestMethods {
-        static String isHungry(String isHungry) {
+        static Boolean isHungry(String isHungry) {
             String eat = "";
             if (isHungry.equals("true")) {
                 eat = "Hungry";
@@ -51,4 +51,5 @@ public class CucumberTests {
         }
     }
 }
+
 

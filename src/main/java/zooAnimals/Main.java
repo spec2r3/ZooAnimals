@@ -20,20 +20,22 @@ import java.util.List;
 
     public class Main {
 
+    @RequestMapping("/")
+
     public static void main(String[] args) {
 
         SpringApplication.run(Main.class, args);
 
     }
 
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:8000")
     @PostMapping("/InitialZoo")
     public String ZooList(String Name, String Breed, LocalDate DoB) {
         ZooList zooWC = new ZooList();
         return zooWC.toString();
     }
 
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:8000")
     @GetMapping("/SelectWildCat")
     public String WildCatSelect() {
         ZooList zooWC = new ZooList();
@@ -44,7 +46,7 @@ import java.util.List;
         return json;
     }
 
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:8000")
     @PostMapping("/addWildCat")
     public String WildCatAdd(String name, String breed, int age) {
         ZooList zooWC = new ZooList();
@@ -55,7 +57,7 @@ import java.util.List;
 
     }
 
-    @CrossOrigin("http://localhost:3000")
+    @CrossOrigin("http://localhost:8000")
     @GetMapping("/WildCatTest")
     public String WildCatTest() {
         WildCat WC = new WildCat("Thriller", "Jaguar", 6);
@@ -66,5 +68,6 @@ import java.util.List;
     }
 
 }
+
 
 

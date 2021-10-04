@@ -8,10 +8,10 @@
         <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.softwareinstitute.training.keiran.springbootForays</groupId>
-    <artifactId>springbotForays</artifactId>
+    <groupId>com.softwareinstitute.training.spec2r3.Zoo</groupId>
+    <artifactId>Zoo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springbotForays</name>
+    <name>Zoo</name>
     <description>Demo project for Spring Bot</description>
     <dependencies>
         <dependency>

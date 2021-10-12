@@ -1,0 +1,48 @@
+-------------------------------------------------------------------------------
+Test set: zooAnimals.RunnerTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.337 s <<< FAILURE! - in zooAnimals.RunnerTests
+WildCat is hungry, so WildCat eats  Time elapsed: 0.263 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'WildCat hunger is "true"' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("WildCat hunger is {string}")
+public void wild_cat_hunger_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("WildCat is hungry")
+public void wild_cat_is_hungry() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("WildCat will be fed")
+public void wild_cat_will_be_fed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+WildCat is not hungry, so WildCat does not eat  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'WildCat hunger is "false"' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("WildCat hunger is {string}")
+public void wild_cat_hunger_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("WildCat is not hungry")
+public void wild_cat_is_not_hungry() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("WildCat will not be fed")
+public void wild_cat_will_not_be_fed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

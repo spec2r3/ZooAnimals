@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CucumberTests {
     private String Hungry;
-    private Boolean WildCatEat;
+    private String WildCatEat;
 
     @Given("WildCat hunger is true")
     public void wildcatHungerIs(String Hunger) {
@@ -42,7 +42,7 @@ public class CucumberTests {
     }
 
     static class TestMethods {
-        static Boolean isHungry(String isHungry) {
+        static String isHungry(String isHungry) {
             String eat = "";
             if (isHungry.equals("true")) {
                 eat = "Hungry";

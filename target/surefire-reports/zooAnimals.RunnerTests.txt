@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: zooAnimals.RunnerTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.337 s <<< FAILURE! - in zooAnimals.RunnerTests
-WildCat is hungry, so WildCat eats  Time elapsed: 0.263 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.425 s <<< FAILURE! - in zooAnimals.RunnerTests
+WildCat is hungry, so WildCat eats  Time elapsed: 0.324 s  <<< ERROR!
 io.cucumber.junit.UndefinedStepException: 
 The step 'WildCat hunger is "true"' and 2 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:

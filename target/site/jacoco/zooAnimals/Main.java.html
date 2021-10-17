@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
-
+@RestController
 <span class="nc" id="L13">    public class Main {</span>
 
 
@@ -19,7 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 <span class="nc" id="L20">    }</span>
 
+    @GetMapping
+    public String hello(){
 
+<span class="nc" id="L25">        return &quot;Hello World&quot;;</span>
+    }
 
 }
 

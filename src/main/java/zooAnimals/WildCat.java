@@ -1,5 +1,7 @@
 package zooAnimals;
 
+import com.google.gson.Gson;
+
 import java.time.LocalDate;
 
 public class WildCat extends Mammal {
@@ -92,5 +94,13 @@ public class WildCat extends Mammal {
             return " Not Hungry";
         }
     }
+
+    @Override
+    public String toString(){
+        String string = "{" +"\"name\":\""+ name +"\",breed\":\""+ breed +"\"}";
+        String json = new Gson().toJson(string);
+        return json;
+    }
+
 
 }

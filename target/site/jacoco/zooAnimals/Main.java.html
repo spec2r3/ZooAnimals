@@ -2,27 +2,26 @@
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.List;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@SpringBootApplication
+@org.springframework.boot.autoconfigure.SpringBootApplication
 @RestController
 <span class="nc" id="L13">    public class Main {</span>
-
-
     public static void main(String[] args) {
 
-<span class="nc" id="L18">        SpringApplication.run(Main.class, args);</span>
+<span class="nc" id="L16">        SpringApplication.run(Main.class, args);</span>
 
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L18">    }</span>
 
-    @GetMapping
-    public String hello(){
-
-<span class="nc" id="L25">        return &quot;Hello World&quot;;</span>
+    @CrossOrigin(&quot;http://localhost:3000&quot;)
+    @GetMapping(&quot;/AddWC&quot;)
+    public String AddBook(){
+<span class="nc" id="L23">        WildCat WC = new WildCat(&quot;Dot&quot;,&quot;Cheetah&quot;,12/5/2018);</span>
+<span class="nc" id="L24">        return WC.toString();</span>
     }
 
 }

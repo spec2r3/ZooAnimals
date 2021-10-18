@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WildCat.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo</a> &gt; <a href="index.source.html" class="el_package">zooAnimals</a> &gt; <span class="el_source">WildCat.java</span></div><h1>WildCat.java</h1><pre class="source lang-java linenums">package zooAnimals;
 
+import com.google.gson.Gson;
+
 import java.time.LocalDate;
 
 public class WildCat extends Mammal {
@@ -9,89 +11,97 @@ public class WildCat extends Mammal {
     private LocalDate DOB;
     private boolean Hungry;
 
-<span class="fc" id="L12">    public WildCat() {</span>
+<span class="fc" id="L14">    public WildCat() {</span>
 
-<span class="fc" id="L14">        this.breed = &quot;Tiger&quot;;</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L16">        this.breed = &quot;Tiger&quot;;</span>
+<span class="fc" id="L17">    }</span>
 
-<span class="fc" id="L17">    public WildCat(String name) {</span>
+<span class="fc" id="L19">    public WildCat(String name) {</span>
 
-<span class="fc" id="L19">        this.name = name;</span>
-<span class="fc" id="L20">    }</span>
+<span class="fc" id="L21">        this.name = name;</span>
+<span class="fc" id="L22">    }</span>
 
-<span class="fc" id="L22">    public WildCat(String name, String Breed) {</span>
-<span class="fc" id="L23">       this.name = name;</span>
-<span class="fc" id="L24">       this.breed = Breed;</span>
-<span class="fc" id="L25">    }</span>
+<span class="fc" id="L24">    public WildCat(String name, String Breed) {</span>
+<span class="fc" id="L25">       this.name = name;</span>
+<span class="fc" id="L26">       this.breed = Breed;</span>
+<span class="fc" id="L27">    }</span>
 
-<span class="fc" id="L27">    public WildCat(String Name, String Breed, LocalDate dateOfBirth) {</span>
-<span class="fc" id="L28">        this.name = Name;</span>
-<span class="fc" id="L29">        this.breed = Breed;</span>
-<span class="fc" id="L30">        this.DOB = dateOfBirth;</span>
-<span class="fc" id="L31">    }</span>
+<span class="fc" id="L29">    public WildCat(String Name, String Breed, LocalDate dateOfBirth) {</span>
+<span class="fc" id="L30">        this.name = Name;</span>
+<span class="fc" id="L31">        this.breed = Breed;</span>
+<span class="fc" id="L32">        this.DOB = dateOfBirth;</span>
+<span class="fc" id="L33">    }</span>
 
-<span class="nc" id="L33">    public WildCat(String pName, String pBreed, LocalDate dateOfBirth, boolean hungry) {</span>
-<span class="nc" id="L34">        this.name = pName;</span>
-<span class="nc" id="L35">        this.breed = pBreed;</span>
-<span class="nc" id="L36">        this.DOB = dateOfBirth;</span>
-<span class="nc" id="L37">        this.Hungry = hungry;</span>
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L35">    public WildCat(String pName, String pBreed, LocalDate dateOfBirth, boolean hungry) {</span>
+<span class="nc" id="L36">        this.name = pName;</span>
+<span class="nc" id="L37">        this.breed = pBreed;</span>
+<span class="nc" id="L38">        this.DOB = dateOfBirth;</span>
+<span class="nc" id="L39">        this.Hungry = hungry;</span>
+<span class="nc" id="L40">    }</span>
 
-<span class="nc" id="L40">    public WildCat(String name, String breed, int Years, boolean hungry) {</span>
-<span class="nc" id="L41">        this.name = name;</span>
-<span class="nc" id="L42">        this.breed = breed;</span>
-<span class="nc" id="L43">        this.DOB = LocalDate.now().minusYears(Years);</span>
-<span class="nc" id="L44">        this.Hungry = hungry;</span>
-<span class="nc" id="L45">    }</span>
-<span class="fc" id="L46">    public WildCat(String name, String breed, int Years) {</span>
-<span class="fc" id="L47">        this.name = name;</span>
-<span class="fc" id="L48">        this.breed = breed;</span>
-<span class="fc" id="L49">        this.DOB = LocalDate.now().minusYears(Years);</span>
-<span class="fc" id="L50">        this.Hungry = false;</span>
-<span class="fc" id="L51">    }</span>
+<span class="nc" id="L42">    public WildCat(String name, String breed, int Years, boolean hungry) {</span>
+<span class="nc" id="L43">        this.name = name;</span>
+<span class="nc" id="L44">        this.breed = breed;</span>
+<span class="nc" id="L45">        this.DOB = LocalDate.now().minusYears(Years);</span>
+<span class="nc" id="L46">        this.Hungry = hungry;</span>
+<span class="nc" id="L47">    }</span>
+<span class="fc" id="L48">    public WildCat(String name, String breed, int Years) {</span>
+<span class="fc" id="L49">        this.name = name;</span>
+<span class="fc" id="L50">        this.breed = breed;</span>
+<span class="fc" id="L51">        this.DOB = LocalDate.now().minusYears(Years);</span>
+<span class="fc" id="L52">        this.Hungry = false;</span>
+<span class="fc" id="L53">    }</span>
 
     public void setName(String Name)
     {
-<span class="fc" id="L55">        this.name = Name;</span>
-<span class="fc" id="L56">    }</span>
+<span class="fc" id="L57">        this.name = Name;</span>
+<span class="fc" id="L58">    }</span>
 
     public String getName()
     {
-<span class="fc" id="L60">        return name;</span>
+<span class="fc" id="L62">        return name;</span>
     }
 
     public void setBreed(String Breed)
     {
-<span class="fc" id="L65">        this.breed = Breed;</span>
-<span class="fc" id="L66">    }</span>
+<span class="fc" id="L67">        this.breed = Breed;</span>
+<span class="fc" id="L68">    }</span>
 
     public String getBreed() {
-<span class="fc" id="L69">        return breed;</span>
+<span class="fc" id="L71">        return breed;</span>
     }
 
     public void setDateOfBirth(LocalDate DateOfBirth) {
-<span class="fc" id="L73">        this.DOB = DateOfBirth;</span>
-<span class="fc" id="L74">    }</span>
+<span class="fc" id="L75">        this.DOB = DateOfBirth;</span>
+<span class="fc" id="L76">    }</span>
 
     public LocalDate getDateOfBirth() {
-<span class="fc" id="L77">        return DOB;</span>
+<span class="fc" id="L79">        return DOB;</span>
     }
 
     public boolean getHungry() {
-<span class="fc" id="L81">        return Hungry;</span>
+<span class="fc" id="L83">        return Hungry;</span>
     }
 
     public void setHungry(boolean IsHungry) {
-<span class="fc" id="L85">        this.Hungry = IsHungry;</span>
-<span class="fc" id="L86">    }</span>
+<span class="fc" id="L87">        this.Hungry = IsHungry;</span>
+<span class="fc" id="L88">    }</span>
 
     public String eat() {
-<span class="nc bnc" id="L89" title="All 2 branches missed.">        if(this.Hungry) {</span>
-<span class="nc" id="L90">            return &quot;Hungry&quot;;</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">        if(this.Hungry) {</span>
+<span class="nc" id="L92">            return &quot;Hungry&quot;;</span>
         } else {
-<span class="nc" id="L92">            return &quot; Not Hungry&quot;;</span>
+<span class="nc" id="L94">            return &quot; Not Hungry&quot;;</span>
         }
     }
+
+    @Override
+    public String toString(){
+<span class="nc" id="L100">        String string = &quot;{&quot; +&quot;\&quot;name\&quot;:\&quot;&quot;+ name +&quot;\&quot;,breed\&quot;:\&quot;&quot;+ breed +&quot;\&quot;}&quot;;</span>
+<span class="nc" id="L101">        String json = new Gson().toJson(string);</span>
+<span class="nc" id="L102">        return json;</span>
+    }
+
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

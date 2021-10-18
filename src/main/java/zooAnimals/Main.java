@@ -2,14 +2,13 @@ package zooAnimals;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.time.LocalDate;
-
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@SpringBootApplication
+@org.springframework.boot.autoconfigure.SpringBootApplication
 @RestController
     public class Main {
     public static void main(String[] args) {
@@ -17,10 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
         SpringApplication.run(Main.class, args);
 
     }
-    @GetMapping
-    public String hello() {
-        return "Hello World";
+
+    @CrossOrigin("http://localhost:3000")
+    @GetMapping("/AddWC")
+    public String AddBook(){
+        WildCat WC = new WildCat("Dot","Cheetah",12/5/2018);
+        return WC.toString();
     }
+
 }
 
 
